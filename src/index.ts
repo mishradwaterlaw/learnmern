@@ -1,5 +1,8 @@
+import dotenv from 'dotenv'
 import express, { Request, Response, NextFunction } from 'express';
 
+dotenv.config();
+console.log(`Port is : ${process.env.port}`)
 const app = express();
 
 function requestLogger(req: Request, res: Response, next: NextFunction) {
